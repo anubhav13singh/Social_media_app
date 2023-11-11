@@ -15,27 +15,22 @@ import UpdateProfile from "./_root/pages/UpdateProfile";
 import React from "react";
 
 const App = () => {
+  const isAuthinticated = true;
   return (
     <main>
       <Routes>
-        {/* public routes */}
-        <Route element={<AuthLayout />}>
-          <Route path="/sign-in" element={<SigninForm />} />
-          <Route path="/sign-up" element={<SignupForm />} />
-        </Route>
+        <Route path="/sign-in" element={<SigninForm />} />
+        <Route path="/sign-up" element={<SignupForm />} />
 
-        {/* private routes */}
-        <Route element={<RootLayout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/explore" element={<Explore />} />
-          <Route path="/saved" element={<Saved />} />
-          <Route path="/all-users" element={<AllUsers />} />
-          <Route path="/create-post" element={<CreatePost />} />
-          <Route path="/update-post/:id" element={<EditPost />} />
-          <Route path="/posts/:id" element={<PostDetails />} />
-          <Route path="/profile/:id/*" element={<Profile />} />
-          <Route path="/update-profile/:id" element={<UpdateProfile />} />
-        </Route>
+        <Route path="/" element={<SignupForm />} />
+        <Route path="/explore" element={<Explore />} />
+        <Route path="/saved" element={<Saved />} />
+        <Route path="/all-users" element={<AllUsers />} />
+        <Route path="/create-post" element={<CreatePost />} />
+        <Route path="/update-post/:id" element={<EditPost />} />
+        <Route path="/posts/:id" element={<PostDetails />} />
+        <Route path="/profile/:id/*" element={<Profile />} />
+        <Route path="/update-profile/:id" element={<UpdateProfile />} />
       </Routes>
       {/* <Toaster /> */}
     </main>
