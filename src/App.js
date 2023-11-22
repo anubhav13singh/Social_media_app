@@ -13,7 +13,7 @@ import PostDetails from "./_root/pages/PostDetails";
 import Profile from "./_root/pages/Profile";
 import UpdateProfile from "./_root/pages/UpdateProfile";
 import React from "react";
-
+import "./app.css";
 const App = () => {
   const isAuthinticated = true;
   return (

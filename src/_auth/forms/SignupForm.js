@@ -46,7 +46,7 @@ const SignupForm = () => {
             </div>
             <div>
               <Field type="email" name="email" placeholder="Email" />
-              <ErrorMessage name="email" component="div" />
+              <ErrorMessage name="email" component="div" className="error" />
             </div>
             <div>
               <Field type="password" name="password" placeholder="Password" />
@@ -54,7 +54,7 @@ const SignupForm = () => {
             </div>
             <div>
               <Field type="text" name="name" placeholder="Name" />
-              <ErrorMessage name="name" component="div" />
+              <ErrorMessage name="name" component="div" className="error" />
             </div>
             <button type="submit" disabled={isSubmitting}>
               Submit
