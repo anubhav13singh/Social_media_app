@@ -1,8 +1,6 @@
-import { Box } from "@mui/material";
-import React from "react";
-import { Navigate, Outlet } from "react-router-dom";
+import { Outlet, Navigate } from "react-router-dom";
 
-function AuthLayout() {
+export default function AuthLayout() {
   const isAuthenticated = false;
 
   return (
@@ -10,20 +8,14 @@ function AuthLayout() {
       {isAuthenticated ? (
         <Navigate to="/" />
       ) : (
-        <Box
-          display="flex"
-          flex="1"
-          justifyContent="center"
-          alignItems="center"
-          flexDirection="column"
-          py="10"
-        >
-          <Outlet />
-          {/* this ll returns to signup or sign in page means in authpage */}
-        </Box>
+        <>
+          <section>
+            <Outlet />
+          </section>
+
+          <img src="/assets/images/side-img.svg" alt="logo" />
+        </>
       )}
     </>
   );
 }
-
-export default AuthLayout;
